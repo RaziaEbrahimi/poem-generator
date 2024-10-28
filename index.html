@@ -8,36 +8,44 @@
     <title>AI Poem Generator</title>
   </head>
   <body>
-    <header>
-      <h1>AI Poem Generator</h1>
-    </header>
-    <main>
-      <form>
-        <input
-          type="text"
-          placeholder="Enter the topic of poem you want"
-          required
-          autofocus
-          aria-autocomplete="off"
-        />
-        <input type="submit" value="Search" />
-      </form>
-      <div>the poem will apears here</div>
-    </main>
-    <footer>
-      ThisAI project was coded by
-      <a href="https://github.com/RaziaEbrahimi" target="_blank"
-        >Razia Ebrahimi</a
-      >
-      and is
-      <a href="https://github.com/RaziaEbrahimi/poem-generator" target="_blank"
-        >open-sourced on GitHub</a
-      >
-      and is
-      <a href="https://delicate-custard-b8c555.netlify.app/" target="_blank"
-        >hosted on Netliy</a
-      >
-    </footer>
+    <div class="container">
+      <main>
+        <div class="main">
+          <header>
+            <h1>AI Poem Generator</h1>
+            <hr />
+          </header>
+          <form>
+            <input
+              type="text"
+              placeholder="Enter the topic of poem you want"
+              required
+              autofocus
+              aria-autocomplete="off"
+              class="instructions"
+            />
+            <input type="submit" value="Search" class="submit-button" />
+          </form>
+          <div class="poem">the poem will apears here</div>
+        </div>
+      </main>
+      <footer>
+        ThisAI project was coded by
+        <a href="https://github.com/RaziaEbrahimi" target="_blank"
+          >Razia Ebrahimi</a
+        >
+        and is
+        <a
+          href="https://github.com/RaziaEbrahimi/poem-generator"
+          target="_blank"
+          >open-sourced on GitHub</a
+        >
+        and is
+        <a href="https://delicate-custard-b8c555.netlify.app/" target="_blank"
+          >hosted on Netliy</a
+        >
+      </footer>
+    </div>
     <script src="src/index.js"></script>
   </body>
 </html>

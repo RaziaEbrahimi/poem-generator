@@ -2,10 +2,13 @@ function generatePoem(event) {
   event.preventDefault();
   let poemTitle = document.querySelector("#instructions");
   let apiKey = "c0fe48db87o5af7b7dbeb543tdaa050b";
-  let prompt = `User instructions: Generate a English and Persian poem about ${poemTitle.value}`;
+  let prompt = `User instructions: Generate a English poem about ${poemTitle.value}`;
   let context =
-    "You are a romantic Poem expert and love to write short poems. You mission is to generate a 4 line poem in English and Persian and follow direction for Persian poem start right to left . Make sure to follow the user instructions.";
+    "You are a romantic Poem expert and love to write short poems. You mission is to generate a 4 line poem in basic HTML and separate each line with a <br />. Do not include a title to the poem. Make sure to follow the user instructions.Write the name of author inside a <strong> element at the end of the poem and NOT at the beginning";
   let apiUrl = `https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${apiKey}`;
+  let poemElement = document.querySelector("#poem");
+  poemElement.classList.remove("hidden");
+  poemElement.innerHTML = `<div class="generating">⏳ Generating a English poem about ${poemTitle.value}</div>`;
   axios.get(apiUrl).then(showPoem);
 }
 

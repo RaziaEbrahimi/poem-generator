@@ -2,7 +2,7 @@ function generatePoem(event) {
   event.preventDefault();
 
   new Typewriter("#poem", {
-    strings: "the poem....",
+    strings: "نفس باد صبا مشک فشان خواهد شد",
     autoStart: true,
     delay: 1,
     cursor: "",
